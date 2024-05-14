@@ -21,6 +21,7 @@ echo "Retrieving file ${FASTQ_R1}"
 
 curl -O ${FASTQ_URL}/${FASTQ_R1}
 
+#print out the number of lines - using pipe to avoid actually making the uncompressed file
 echo "How many lines"
 
 gunzip -c ${FASTQ_R1} | wc -l
